@@ -1,7 +1,7 @@
 Haroonga-httpd
 ===
 
-[![Build Status](https://travis-ci.org/cosmo0920/haroonga-httpd.svg?branch=master)](https://travis-ci.org/cosmo0920/haroonga-httpd)
+[![Build Status](https://travis-ci.org/haroonga/haroonga-httpd.svg?branch=master)](https://travis-ci.org/haroonga/haroonga-httpd)
 
 Yet another Groonga HTTP server written in Haskell.
 

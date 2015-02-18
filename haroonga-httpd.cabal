@@ -37,4 +37,4 @@ executable haroonga-httpd
 
 source-repository head
   type: git
-  location: git@github.com:cosmo0920/haroonga-httpd.git
+  location: git@github.com:haroonga/haroonga.git
