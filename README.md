@@ -5,6 +5,8 @@ Haroonga-httpd
 
 Yet another Groonga HTTP server written in Haskell.
 
+**Not released yet.**
+
 ## Usage
 
 How to Use:
