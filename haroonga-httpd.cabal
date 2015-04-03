@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                haroonga-httpd
-version:             0.1.0.0
+version:             0.1.1.0
 synopsis:            Yet another Groonga http server.
 description:         Yet another Groonga http server written in Haskell.
 license:             LGPL-2.1
