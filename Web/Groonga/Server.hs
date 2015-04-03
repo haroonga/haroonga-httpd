@@ -10,7 +10,7 @@ import Control.Monad.IO.Class (liftIO)
 import Foreign.Ptr (Ptr)
 import Network.Wai.Middleware.RequestLogger (logStdoutDev)
 import System.Directory
-#if !MIN_VERSION_time(1,4,0)
+#if !MIN_VERSION_time(1,5,0)
 import Data.Time
 import System.Locale
 #else
