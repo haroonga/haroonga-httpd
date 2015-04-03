@@ -97,8 +97,13 @@ app dbpath = do
 
       get_current_time_as_double :: IO Double
       get_current_time_as_double = do
+#if MIN_VERSION_time(1,4,0)
         epoch_double <- (read <$> Time.formatTime Locale.defaultTimeLocale "%s.%q"
                               <$> Time.getCurrentTime) :: IO Double
+#else
+        epoch_double <- (read <$> formatTime defaultTimeLocale "%s.%q"
+                              <$> getCurrentTime) :: IO Double
+#endif
         return epoch_double
 
       format_response :: (Show a, Num a) => Int -> a -> a -> String -> String
