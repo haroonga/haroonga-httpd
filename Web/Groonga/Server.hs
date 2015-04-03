@@ -101,8 +101,8 @@ app dbpath = do
         epoch_double <- (read <$> Time.formatTime Locale.defaultTimeLocale "%s.%q"
                               <$> Time.getCurrentTime) :: IO Double
 #else
-        epoch_double <- (read <$> formatTime defaultTimeLocale "%s.%q"
-                              <$> getCurrentTime) :: IO Double
+        epoch_double <- (read <$> Time.formatTime Time.defaultTimeLocale "%s.%q"
+                              <$> Time.getCurrentTime) :: IO Double
 #endif
         return epoch_double
 
