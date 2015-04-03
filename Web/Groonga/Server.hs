@@ -10,8 +10,8 @@ import Control.Monad.IO.Class (liftIO)
 import Foreign.Ptr (Ptr)
 import Network.Wai.Middleware.RequestLogger (logStdoutDev)
 import System.Directory
-import Data.Time
-import System.Locale
+import qualified Data.Time as Time
+import qualified System.Locale as Locale
 import Control.Applicative ((<$>))
 
 type GrnCtx = Ptr C'_grn_ctx
@@ -97,7 +97,8 @@ app dbpath = do
 
       get_current_time_as_double :: IO Double
       get_current_time_as_double = do
-        epoch_double <- (read <$> formatTime defaultTimeLocale "%s.%q" <$> getCurrentTime) :: IO Double
+        epoch_double <- (read <$> Time.formatTime Locale.defaultTimeLocale "%s.%q"
+                              <$> Time.getCurrentTime) :: IO Double
         return epoch_double
 
       format_response :: (Show a, Num a) => Int -> a -> a -> String -> String
